@@ -1,0 +1,929 @@
+/* @override 
+	http://localhost/templates/assets/css/screen.css
+	http://www.soaalarm.nl/templates/assets/css/screen.css
+*/
+
+/* @group Essentials */
+
+/* Author:Jurre-Jan Smit */
+
+/* Version:0.8.5 */
+
+/*--------------------*/
+
+/* Preferable editor:CSSEdit */
+
+/* @group Library */
+
+
+@import "lib/reset.css";
+
+@import "lib/typography.css";
+
+@import "lib/forms.css";
+
+/* @end */
+
+/* @end */
+
+/* @group container */
+
+.colleft{
+			width : 175px ;
+			margin : 0px 0 0 25px ;
+			padding : 10px 39px 20px 20px ;
+			position : absolute ;
+			left : 0px ;
+			top : 260px ;
+			
+			}
+
+.colright{
+			margin-left : 260px ;
+
+			min-width : 440px ;
+			max-width : 540px ;
+			padding : 20px 20px 20px ;
+			margin : 0px 0 20px 240px ;
+			}
+
+.colright .ads{
+			float : right ;
+			margin : 45px 0 20px 40px ;
+			}
+#footads{
+			display : block ;
+			margin : 0px 0 20px 255px; 
+
+			}
+
+body{
+			background : #fff ;
+			margin : 0 ;
+			padding : 0 ;
+			}
+
+#container{
+			background : #fff ;
+			overflow : hidden ;
+			padding : 20px 0 0 ;
+		
+			}
+
+.container{
+			background : #fff ;
+			overflow : hidden ;
+			padding : 0 20px ;
+			}
+
+/* @end */
+
+/* @group type */
+*{
+			-webkit-text-size-adjust: none;
+
+			}
+p{
+			margin : 1em 0 ;
+			font-size : 1em ;
+			line-height : 20px ;
+			color : #333 ;
+			}
+
+p a, label a, ul a{
+			color : #f60 ;
+			text-decoration : underline ;
+			}
+h3{
+			font-size : 1.5em ;
+			color : #f60 ;
+			padding : 0 0 5px 0 ;
+			margin:10px 0 10px 0;
+			font-weight : bold ;
+
+			}
+
+h4{
+			color : #666 ;
+			font-size : 1.25em ;
+			padding : 5px 0 ;
+			margin:10px 0 10px 0;
+			
+	
+			}
+
+ul{
+			line-height : 20px ;
+			list-style : square ;
+			list-style-position : outside ;
+			margin : 0 0 0 15px ;
+			color : #333 ;
+			}
+
+/* @end */
+
+/* @group header */
+
+
+
+#spec h1
+			{
+			display : block ;
+			width : 240px ;
+			height : 180px ;
+			margin : 0  ;
+			overflow :  ;
+			position : absolute ;
+			top : 0px ;
+			bottom : 0px ;
+			left : 0px ;
+			background : url(../img/groove.png) no-repeat center right;
+			}
+
+#spec h1 a
+			{
+			display : block ;
+			width : 240px ;
+			height : 180px ;
+			color:#f60;
+			text-transform : uppercase ;
+			font-size : 42px; 
+			text-indent:-999px;
+			background : url(../img/logodiap.png) no-repeat center center;
+			}
+.shad{
+			}
+.shadN{
+			background : #fff url(../img/shadN.jpg) center center ;
+			height:20px;
+			width : 100% ;
+			
+			}
+.shadS{
+			background : #fff url(../img/shadS.jpg) center center ;
+			height:20px;
+			width : 100% ;
+			
+			}
+#specBody
+			{
+			position : relative ;
+			padding : 20px ;
+			background : #ff6600 url(../img/specgrad.jpg) center center ;	
+
+			}
+
+#specGroove
+			{
+			width : 2px ;
+			height : 200px ;
+			position : absolute ;
+			top : -10px ;
+			left : 800px ;
+			background : url(../img/groove.png) no-repeat center right;
+
+			}
+
+#spec
+			{
+			position : relative ;
+
+			border : 1px solid #ccc;
+			border-width : 0 ;
+			min-width : 760px ;
+			
+			}
+
+
+
+#spec .pros
+			{
+			display : block ;
+			position : absolute ;
+			top : 40px ;
+			left : 20px ;
+			margin : 0px 0 0 0 ;
+			width :220px ;
+			font-size : 14px ;
+			text-align : right ;
+			}
+
+#spec .pros li
+			{
+			list-style : none ;
+			list-style-position : inside ;
+			color : #fff ;
+			font-weight : bold ;
+			text-shadow :  0px -1px 0px rgba(0,0,0,0.3) ;
+			}
+
+#spec #ctas
+			{
+			margin : 20px 0 0 240px ;
+			height : 30px ;
+			position : relative ;
+			}
+
+#spec h2
+			{
+			font-size : 24px;
+			line-height : 30px ;
+			margin : 0 0 0 240px;
+			color : #fafafa ;
+			font-weight : 900 ;
+			width : 460px ;
+			text-shadow :  0px -1px 0px rgba(0,0,0,0.25) ;
+			}
+
+h2 .hl{
+			color : #333 ;
+			text-shadow :  none;
+			}
+
+h2:hover .hl{
+			color : #000 ;
+			text-shadow :  0px 0px 20px rgba(255,255,255,1) ;
+			}
+
+/* @end */
+
+/* @group menu */
+
+#mainMenu
+			{
+			margin : 20px 0 0px 260px ;
+			}
+
+#mainMenu ul
+			{
+			height:22px;
+			text-transform: lowercase;
+			
+
+			}
+
+#mainMenu li
+			{
+			float : left ;
+			height : 22px ;
+			margin-right : 20px ;
+			}
+
+#mainMenu a{
+			display : block ;
+			padding : 4px 0 4px 0 ;
+			height : 14px ;			
+			line-height : 14px ;
+			height:14px;
+			font-size : 14px ;
+			text-decoration : none ;
+			}
+
+.menu .menu-current a,
+.menu .menu-parent a{
+			color : #f60 ;
+			font-weight : regular ;
+			}
+
+#subMenu{
+			margin : 20px 0 ;
+			text-align : right ;
+			}
+
+
+
+#subMenu a{
+			text-decoration : none ;
+			
+			}
+.menu a{
+			
+			font-size : 12px ;
+			line-height : 20px ;
+			color : #111 ;
+			text-decoration : underline ;
+			
+			}
+
+/* @end */
+
+/* @group forms */
+
+form{
+			}
+
+form p{
+			}
+
+form fieldset{
+			border : none;
+			padding : 10px 10px ;
+			margin : 0 0 10px  ;
+			border : 1px solid #f60 ;
+			border-width : 3px 0 0 0;
+			background : #fff
+			}
+
+form fieldset legend{
+			color : #f60 ;
+
+			margin : 0 ;
+			padding : 0 ;
+			}
+
+form label{
+			position : relative ;
+			display : block ;
+			padding : 5px 0px ;
+			}
+
+form label .tooltip{
+			position : absolute ;
+			right : 0px ;
+			bottom : 5px ;
+			font-weight : normal ;
+			font-size : 10px ;
+			display : none ;
+			}
+
+form span{
+			display : block ;
+			font-weight : normal ;
+			color:#666;
+			font-size : 11px ;		
+		}
+
+form input.inp_text{
+			display : block ;
+			height : 18px ;
+			width : 200px ;
+			border : 1px solid #999 ;
+			margin : 0 ;
+			padding : 4px ;
+			background : #fff ;
+			font-weight : bold ;
+		
+		}
+
+form input.invalid, form select.invalid{
+			border-color : #f00 ;
+		
+		}
+
+form select{
+			display : block ;
+			height : auto ;
+			width : 200px ;
+			border : 1px solid #999 ;
+			margin : 0 ;
+			padding : 4px ;
+			background : #fafafa ;
+			font-weight : bold ;
+		
+		}
+
+form .lab_submit{
+			position : relative ;
+			height : 30px ;
+			border-top : 1px solid #ccc;
+			padding-top : 10px ;
+			margin-top : 10px ;
+			}
+
+form .lab_checkbox span, form .lab_checkbox submit{
+			display : inline ;
+			}
+
+form .lab_submit input{
+			cursor : pointer ;
+			}
+
+form .lab_submit .prim{
+			position : absolute ;
+			font-size : 14px ;
+
+			line-height : 14px ;
+			bottom : 0px ;
+			right : 0px ;
+			background : #f60 ;
+			border : none ;
+			color : #fff ;
+			padding : 5px 15px ;
+			
+			border-radius:15px;
+			-moz-border-radius:15px;
+			-webkit-border-radius:15px;
+			-o-border-radius:15px;
+			}
+
+form .lab_submit .sec{
+			position : absolute ;
+			left : 0px ;
+			bottom : 0px ;
+			margin : 0 ;
+			padding : 0 ;
+			
+			font-size : 12px ;
+			background : none ;
+			border : none ;
+			color : #666;
+			text-decoration : underline ;
+						}
+
+/* @end */
+
+/* @group soanotify */
+
+#soanotify h2{
+			margin:0 0 10px
+			}
+
+#soanotify form p{
+			margin:0 0 0px
+			}
+						
+#progress{
+			text-transform : lowercase ;
+			font-size : 11px ;
+			color : #999 ;
+			border-bottom:1px dotted #ccc ;
+			margin-bottom : 20px ;
+
+			}
+
+#progress span{
+			float : left ;
+			padding : 0 5px 0 0 ;
+			margin-right : 10px ;
+			}
+
+#progress span.current{
+			color : #f60 ;
+			}
+			
+#soanotify .side{
+	margin-right : 200px ;
+			}
+
+#soanotify #sentStatus{			
+			float : right ;
+			background : #eee ;
+			color : #333 ;
+			width : 180px ;
+			}
+
+#soanotify #sentStatus h4{
+			margin : 10px 10px 0 ;
+			border : none ;
+			font-size : 14px ;
+			color : #333 ;			
+			}
+
+#soanotify #mailresult li.address{
+			border-top : 1px solid #fff ;
+			}
+
+#soanotify #mailresult li.address{
+			padding : 10px ;
+			}
+
+
+#soanotify #mailresult li.address span.email{
+			font-weight : bold ;
+			}
+
+#soanotify #mailresult li li{
+			font-size : 10px ;
+			}
+
+#soanotify #mailresult li.address.skipped{
+			color : #999;
+			}
+
+/* @end */
+
+/* @group menushading */
+
+.colleft .sideShade{
+			position : absolute ;
+			top : 0px ;
+			bottom:0px;
+			right : 0px ;
+			width : 20px ;
+			margin : 10px 0 ;
+			background : url(../img/shadeRepeat.png) ;
+			
+			}
+
+.colleft .sideShade .fadeN{
+			position : absolute ;
+			top : 0px ;
+			right : 0px ;
+			width : 20px ;
+			height:40px;
+			background : url(../img/shadeFadeN.png) ;
+			
+			}
+
+.colleft .sideShade .fadeS{
+			position : absolute ;
+			bottom : 0px ;
+			right : 0px ;
+			width : 20px ;
+			height:40px;
+			background : url(../img/shadeFadeS.png) ;
+			
+			}
+
+/* @end */
+
+/* @group cta's */
+
+.cta{
+			float : left  ;
+			background : #fff ;
+			color : #f60;
+			
+			height : 14px ;
+			padding : 7px 20px 6px ;
+			margin-right : 10px ;
+			
+			text-transform : uppercase ;
+			text-decoration : none ;
+			text-align : center ;
+			line-height : 14px ;			
+			font-size : 12px ;			
+			font-weight : bold ;		
+			border-radius:10px;
+			-moz-border-radius:15px;
+			-webkit-border-radius:15px;
+			-o-border-radius:15px;
+			-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.25);
+			-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.25);
+			}
+
+.cta.main{
+			float : left  ;
+			background : #f60 ;
+			border : none ;
+			padding : 7px 10px 7px;
+			color : #fff;
+				
+			border-radius:10px;
+			-moz-border-radius:10px;
+			-webkit-border-radius:10px;
+			-o-border-radius:10px;
+			
+			box-shadow:0 0 10px rgba(0,0,0,0.25);
+			-webkit-box-shadow:0 0 10px rgba(0,0,0,0.25);
+			-o-box-shadow:0 0 10px rgba(0,0,0,0.25);
+			-moz-box-shadow:0 0 10px rgba(0,0,0,0.25);
+			
+			background: -moz-linear-gradient(top center , #f60 0%, #f40 100%);
+			}
+.cta:hover{
+			text-decoration : none ;
+			}
+
+.cta.main:hover{
+			-moz-box-shadow:0 0 10px rgba(0,0,0,0.15);
+			}
+
+.cta.sec:hover{
+			-moz-box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+			-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+			box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+			
+			}
+
+.cta.sec:active{
+			-moz-box-shadow: 0px -1px 1px rgba(0,0,0,0.55);
+			-webkit-box-shadow: 0px -1px 1px rgba(0,0,0,0.55);
+			box-shadow: 0px -1px 1px rgba(0,0,0,0.55);
+			background : #fafafa ;
+			padding : 8px 20px 5px ;
+			
+			}
+
+.cta.main:active{
+
+			}
+
+/* @end */
+			
+
+
+/* @group Widgets */
+
+.widget{
+			width : 240px ;			
+			background : #ffffff ;
+			margin : 0  0 20px 0 ;
+			padding : 0 0 10px 0 ;
+			border-bottom : 1px solid #ccc;
+			}
+
+.widget h4{
+			font-size : 14px ;
+			color : #333 ;
+			margin : 0 0 10px ;
+			}
+
+
+/* @end */
+
+/* @group social media */
+
+#share{
+			display :  ;
+			position : fixed ;
+			bottom : 0px ;
+			left : 0px ;
+			height : 30px ;
+			width : 100% ;
+			padding : 0 40px ;
+			background : #fafafa ;
+			}
+
+.ios #share{
+			position : static ;
+			bottom : auto ;
+			left : auto ;
+			}
+
+#share p{
+			float : left ;
+			height : 12px ;
+			line-height : 12px ;
+			font-size : 12px ;
+			padding : 9px 0;
+			margin : 0 10px 0 0 ;
+			color : #999 ;
+			}
+
+#share .fb{
+			float : left ;
+			margin : 5px 0 ;
+			color : #999 ;
+			}
+
+#share .tw{
+			float : left ;
+			margin : 0 5px ;
+			}
+
+#share .shadow{
+			position : absolute ;
+			bottom : 30px ;
+			left : 0px ;
+			height : 10px ;
+			width : 100% ;
+			background : url(../img/shadowTop.png) ;
+			}
+
+.ie #share .shadow{
+			border-bottom : 1px solid #ccc ;
+			background : none ;
+			}
+.ios #share .shadow{
+			display: none;
+			}
+#share .twitter-share-button{
+			margin : 5px 0 0 0 ;
+			float : left ;
+			}
+
+#share .facebook-share-button{
+			margin : 6px 0 0 0 ;
+			float : left ;
+			position : relative ;
+			left:-10px;
+			}
+
+/* @end */
+
+/* @group sitemap */
+
+#sitemap {
+			font-size : 11px ;
+			display : block ;
+			background : #fff url(../img/shadS.png) repeat-x left -5px;
+			text-transform : lowercase ;
+			padding : 30px 0 0 40px ;
+			}
+
+#sitemap ul{
+			}
+
+
+#sitemap ul li{
+			float : none ;
+			display : block ;
+			position : relative ;
+			line-height : 10px ;
+			min-height : 24px ;
+			border-bottom :  ;
+			}
+
+#sitemap ul li:hover, #sitemap ul li:hover li{
+			}
+
+#sitemap ul li a{
+			display : block ;
+			position : absolute ;
+			left : 0px ;
+			width : 90px ;
+			color : #333 ;
+			padding : 0 0px;
+			text-decoration : none ;
+
+			}
+
+#sitemap ul li ul{
+			margin-left : 80px ;
+			padding : 0 ;
+			border : none ;
+			}
+
+
+
+#sitemap ul ul li:hover{
+			}
+
+#sitemap ul ul li{
+			float : left ;
+			width : auto ;
+			min-height : 0px ;
+			height : 24px ;
+			}
+
+#sitemap ul ul li a{
+			position : static ;
+			width : auto ;
+			color : #999 ;
+			padding : 0px 6px ;
+			background : none ;
+			}
+
+#sitemap ul ul li a:hover{
+			color : #ff6600 ;
+			}
+
+
+/* @end */
+
+/* @group form */
+
+div.field_container{
+			width : 100% ;
+			position : relative ;
+			margin : 10px 0 ;
+			}
+
+div.field_title{
+			position : absolute ;
+			top : 0px ;
+			left : 0px ;
+				}
+
+div.field_title .required{
+				display : none ;
+				}
+
+div.field_title label{
+			font-weight : normal ;
+			font-size : 12px ;
+			line-height : 12px ;
+			height : 20px ;
+				}
+
+div.field_input{
+			margin-left : 200px ;
+				}
+
+div.field_input label{
+			display : inline ;
+			margin : 0 10px 0 0 ;
+				}
+
+div.field_input .field_checkbox{
+			margin : 0 10px 0 0 ;
+				}
+
+
+/* @end */
+
+#footer{			
+	font-size : 11px ;
+	margin: 0 0 40px;
+}
+			
+#finword{	
+			margin : 10px ;
+			padding : 0 30px ;
+			color:#999;
+			}
+
+#langswitch{
+			margin : 0px 0 10px 0 ;
+			padding : 0px 30px ;	
+			background : #fafafa ;
+			text-transform : lowercase ;
+			}
+
+#langswitch li.label{
+			color : #333 ;
+			width : 65px ;
+			}
+
+#langswitch li
+			{
+			float : left ;
+			padding : 10px 10px ;
+			height : 11px ;
+			line-height : 11px ;
+			font-size : 11px ;
+			
+			}
+
+#langswitch li a,
+#langswitch li span
+			{
+			display : block ;
+			color : #666 ;
+			height : 11px ;
+			line-height : 11px ;
+			font-size : 11px ;
+			padding : 0 ;
+			margin : 0 ;
+			overflow : hidden ;	
+	
+			}
+
+#langswitch li .disabled
+			{
+			color : #999 ;	
+			text-decoration : none;
+			cursor : default ;
+			position : relative ;
+			}
+
+#langswitch li a .b
+			{
+			display : none ;
+			position : absolute ;
+			left : 0px ;
+			bottom : 0px ;
+			}
+
+#langswitch li a.disabled:hover .b
+			{
+			display : block ;
+			}
+
+#langswitch li a.disabled:hover .a
+			{
+			color : #eee ;
+			}
+
+
+table td{
+			border : none ;
+			}
+
+#adwds1
+			{
+			width : 160px ;
+			height : 260px ;			
+			position : absolute ;
+			left : 760px ;
+			top : 360px ;
+			background : #efefef ;
+			
+			}
+
+#adwds2
+			{
+			width : 480px ;
+			height : 80px ;			
+			position : absolute ;
+			left : 280px ;
+			top : 0px ;
+			background : #efefef ;
+			
+			}
+
+#fdbkbtn{
+			width:51px;
+			height:51px;
+			display:block;
+			position:absolute;
+			top:-15px;
+			left:10px;
+			z-index:100;
+}
+#fdbkbtn:hover{
+			top:-14px;
+}
+
+

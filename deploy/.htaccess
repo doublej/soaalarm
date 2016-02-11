@@ -1,0 +1,21 @@
+# ErrorDocument 404 /pages/pagina-niet-gevonden.php
+# ErrorDocument 500 /pages/pagina-niet-gevonden.php
+#
+# Options +FollowSymLinks
+# RewriteEngine On
+# RewriteBase /
+#
+# RewriteCond %{HTTP_HOST} !^www\.soaalarm\.nl [NC]
+# RewriteRule ^(.*)$ http://www.soaalarm.nl/$1 [R=301,L]
+#
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}\.php -f
+# RewriteRule ^([^/]+)$ $1.php
+#
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_URI} !(.*)/$
+# RewriteRule ^(.*)$ $1/ [L,R=301]
+#
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^([^.]+)/$ pages/$1.php

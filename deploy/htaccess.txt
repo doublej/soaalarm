@@ -1,0 +1,35 @@
+ErrorDocument 404 /pages/pagina_niet_gevonden.php
+ErrorDocument 500 /pages/pagina_niet_gevonden.php
+
+Options +FollowSymLinks 
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^domain\.nl$ [NC]
+RewriteRule ^(.*)$ http://www.domain.nl/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.php)
+RewriteCond %{REQUEST_URI} !directory/(.*)$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [R]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^.]+)/$ pages/$1.php
+
+order deny,allow
+# Brand
+allow from 85.148.236.128
+# Brand
+allow from 127.0.0.1
+allow from localhost
+# WbM
+allow from 83.232.130.226
+# Vleut
+allow from 87.251.50.67
+# Thomas
+allow from 83.83.28.175
+
+# Deny rest
+deny from all

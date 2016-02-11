@@ -1,0 +1,84 @@
+<?php
+
+	
+	session_write_close();
+	session_name('soanotify');
+	session_start();
+	$_SESSION['page2'] = true;	
+	session_write_close();
+
+	require_once($_SERVER['DOCUMENT_ROOT'].'/modules/soanotify/incl/functions.php');	
+	$database = new mysqli("soaalarm.nl", "soaalarm", "DavThoJu", "soaalarm");
+
+	$from_address = $_POST['fromAddress'];
+	$to_address = str_replace(' ','', $_POST['toAddress']);
+	$multiple = false;	
+	$user_ip = getIp();
+	$verify_code = randomCode();
+
+	if(strpos($to_address, ',')){
+		$to_addresses = explode(",", $to_address);		
+		$multiple = true;
+	}
+
+		
+	if ($multiple == false){		
+	// email wordt naar 1 adres verzonden 		
+	    $text_addresses = $to_address;
+	    $session->addresses = $to_address;		
+		$i = 1;
+	}else{
+	
+	// email wordt naar meerdere adressen verzonden		
+		$text_addresses = '';			
+		// Loop trough the addresses and create a string
+		$numItems = count($to_addresses);
+	
+		$i = 0;
+		foreach ($to_addresses as $key=>$value) {
+		    $text_addresses .= $value;
+		    $i++;
+		    if($i !== $numItems) {
+		      $text_addresses .= ", ";
+		    }
+		}
+		
+		$session->addresses = $to_addresses;		
+					
+	}
+	
+	
+	$database->query("DELETE FROM custMod_confirmation WHERE userip = '$user_ip'");
+	$database->query("INSERT INTO custMod_confirmation (userip, code) VALUES ('$user_ip', '$verify_code')");
+
+	$session->addressesAmount = $i;
+	$session->fromAddress = $from_address;
+	$session->addressesText = $text_addresses;
+	$session->possibleStd = $_POST['possibleStd'];
+	
+	$pagetype = '?pagetype=confirm_init';
+	
+	
+	$email_message  = '<h1>Bevestig uw Alarm</h1>';
+	$email_message .= '<p>Uw bevestigingscode is <span style="color:red;padding:10px;border:1px solid #333;background:#eee;">'.$verify_code.'</span></p>';
+	$email_message .= '<p>Weet u niet waar dit over gaat, beschouw deze mail dan als onverzonden.</p>';
+	
+		
+	try {
+		deliverMail(
+		'Bevestig uw Alarm',
+		$email_message,
+		'soaalarm@soaalarm.nl,SOA Alarm',
+		$from_address
+		);
+	} catch (Exception $e) {
+		echo 'Unknown Error';
+	}
+	
+	session_name('soanotify');
+	$_SESSION['test'] = 'wat?!';
+
+	header('Location: ../../pages/verstuur-een-soa-alarm.php'.$pagetype);
+	exit;
+						
+?>			

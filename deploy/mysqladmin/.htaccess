@@ -1,0 +1,7 @@
+AuthUserFile /www/htdocs/soaalarm/mysqladmin/.htpasswd
+AuthGroupFile /dev/null
+AuthName ByPassword
+AuthType Basic
+<Limit GET POST>
+require user soaalarm
+</Limit>

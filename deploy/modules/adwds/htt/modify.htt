@@ -1,0 +1,67 @@
+<!-- BEGIN main_block -->
+{REGISTER_EDIT_AREA}
+<script type="text/javascript">
+	jQuery(document).load(function(){
+		$('input').click(
+			function(){
+				alert('x');
+			}
+		);
+	})
+</script>
+<form action="{WB_URL}/modules/adwds/save.php" method="post">
+
+<input type="hidden" name="page_id" value="{PAGE_ID}" />
+<input type="hidden" name="section_id" value="{SECTION_ID}" />
+
+<table cellpadding="0" cellspacing="0" border="0" width="" >
+	<tr>
+		<td align="left">
+			<input type="checkbox" name="template" value="get" style="margin-top: 5px;" />
+		</td>
+		<td align="left">
+			Kies een template (rest van de opties leeg laten)
+			<select name="templ_id" id="templ_id">
+				<option disabled="disabled" selected="selected">Selecteer...</options>
+				{TEMPLATES}
+			</select>
+		</td>
+	</tr>
+</table>
+
+<textarea cols="2" rows="20"  id="code{SECTION}" name="code" style="width: 100%; height: 380px">{CONTENT}</textarea>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="" >
+	<tr>
+		<td align="left">
+			<input type="checkbox" name="template" value="make" style="margin-top: 5px;" />
+		</td>
+		<td align="left">
+			Opslaan als template met naam:
+		</td>
+		<td align="left">
+			<input type="text" name="template_name" value="" />
+		</td>
+	</tr>
+	<tr>
+		<td align="left">
+		</td>
+		<td align="right">
+		</td>
+	</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" >
+<tr>
+	<td align="left">
+		<input type="submit" value="{TEXT_SAVE}" style="width: 100px; margin-top: 5px;" />
+	</td>
+	<td align="right">
+		<input type="button" value="{TEXT_CANCEL}" onclick="javascript: window.location = 'index.php';" style="width: 100px; margin-top: 5px;" />
+	</td>
+</tr>
+</table>
+</form>
+<p>&nbsp;</p>
+<!-- END main_block -->
